@@ -1,0 +1,136 @@
+GET http://localhost:8080/user
+
+###
+
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Test",
+  "username": "test",
+  "password": "test"
+}
+
+###
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Test",
+  "username": "test",
+  "password": "test"
+}
+
+###
+POST http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Test",
+  "username": "test",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/user/updateName?id=1&name=newName
+
+###
+
+POST http://localhost:8080/user/deleteById?id=3
+
+###
+
+POST http://localhost:8080/user/containsById?id=1
+
+###
+
+GET  http://localhost:8080/user/findAllByName?name=Test
+
+###
+
+GET http://localhost:8080/user/findByUsername?username=test
+
+###
+
+POST http://localhost:8080/pet/save
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "test"},
+  "name": "test",
+  "status": "AVAILABLE"
+}
+
+###
+POST http://localhost:8080/pet/save
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "test2"},
+  "name": "test2",
+  "status": "AVAILABLE"
+}
+
+###
+POST http://localhost:8080/pet/save
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "test3"},
+  "name": "test3",
+  "status": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "category": {
+    "name": "test2"
+  },
+  "name": "test2",
+  "status": "AVAILABLE"
+}
+
+###
+
+POST http://localhost:8080/pet/getById?id=1
+
+###
+
+POST http://localhost:8080/pet/getByStatus?petStatus=AVAILABLE
+
+###
+
+POST http://localhost:8080/pet/deleteById?id=1
+
+###
+
+POST http://localhost:8080/order/save
+Content-Type: application/json
+
+{
+  "petId": 1,
+  "shipDate":"2021-06-18T06:53:21",
+  "orderStatus": "PLACED",
+  "complete": true
+
+}
+
+###
+
+POST http://localhost:8080/order/getById?id=2
+
+###
+
+POST http://localhost:8080/order/deleteById?id=1
